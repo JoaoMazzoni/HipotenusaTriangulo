@@ -34,6 +34,14 @@
     potenciaCatetos = cateto1 * cateto1 + cateto2 * cateto2;
     hipotenusa = Math.Sqrt(potenciaCatetos);
 
+    if(cateto1 + cateto2 <= hipotenusa || cateto1 + hipotenusa <= cateto2 || hipotenusa + cateto2 <= cateto1)
+    {
+        Console.WriteLine("\n\n|Os valores informados não formam um triângulo|");
+        Console.WriteLine("--------------------------------------------------------\n\n");
+        Console.WriteLine("|Pressione qualquer tecla|");
+        Console.Clear();
+    }
+
     Console.WriteLine("\nA hipotenusa é: {0:0.00}", hipotenusa);
     Console.WriteLine("\n\n|Pressione qualquer tecla: ");
     Console.ReadKey();
